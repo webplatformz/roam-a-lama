@@ -1,10 +1,10 @@
-import { component$ } from '@builder.io/qwik';
-import type { DocumentHead } from '@builder.io/qwik-city';
+import { component$ } from "@builder.io/qwik";
+import type { DocumentHead } from "@builder.io/qwik-city";
 
-import Counter from '~/components/starter/counter/counter';
-import Hero from '~/components/starter/hero/hero';
-import Infobox from '~/components/starter/infobox/infobox';
-import Starter from '~/components/starter/next-steps/next-steps';
+import Counter from "~/components/starter/counter/counter";
+import Hero from "~/components/starter/hero/hero";
+import Infobox from "~/components/starter/infobox/infobox";
+import Starter from "~/components/starter/next-steps/next-steps";
 
 export default component$(() => {
   return (
@@ -58,7 +58,8 @@ export default component$(() => {
               Example Apps
             </div>
             <p>
-              Have a look at the <a href="/demo/flower">Flower App</a> or the{' '}
+              Have a look at the <a href="/demo/flower">Flower App</a> or the
+              {" "}
               <a href="/demo/todolist">Todo App</a>.
             </p>
           </Infobox>
@@ -69,26 +70,26 @@ export default component$(() => {
             </div>
             <ul>
               <li>
-                <span>Questions or just want to say hi? </span>
+                <span>Questions or just want to say hi?</span>
                 <a href="https://qwik.builder.io/chat" target="_blank">
                   Chat on discord!
                 </a>
               </li>
               <li>
-                <span>Follow </span>
+                <span>Follow</span>
                 <a href="https://twitter.com/QwikDev" target="_blank">
                   @QwikDev
                 </a>
-                <span> on Twitter</span>
+                <span>on Twitter</span>
               </li>
               <li>
-                <span>Open issues and contribute on </span>
+                <span>Open issues and contribute on</span>
                 <a href="https://github.com/BuilderIO/qwik" target="_blank">
                   GitHub
                 </a>
               </li>
               <li>
-                <span>Watch </span>
+                <span>Watch</span>
                 <a href="https://qwik.builder.io/media/" target="_blank">
                   Presentations, Podcasts, Videos, etc.
                 </a>
@@ -102,11 +103,11 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: 'Welcome to Qwik',
+  title: "Welcome to Qwik",
   meta: [
     {
-      name: 'description',
-      content: 'Qwik site description',
+      name: "description",
+      content: "Qwik site description",
     },
   ],
 };
