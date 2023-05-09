@@ -1,15 +1,15 @@
-import { component$, useSignal, useTask$ } from '@builder.io/qwik';
-import { Configuration, OpenAIApi } from 'openai';
-import styles from './attraction-information.module.css';
-import mockFact from '../../mocks/chat-gpt-generation.json';
+import { component$, useSignal, useTask$ } from "@builder.io/qwik";
+// import { Configuration, OpenAIApi } from "openai";
+import styles from "./attraction-information.module.css";
+import mockFact from "../../mocks/chat-gpt-generation.json";
 
-const configuration = new Configuration({
-  apiKey: process.env.CHATGPT_API_KEY,
-});
-const openai = new OpenAIApi(configuration);
+// const configuration = new Configuration({
+//   apiKey: process.env.CHATGPT_API_KEY,
+// });
+// const openai = new OpenAIApi(configuration);
 
 export default component$(() => {
-  const attractionFact = useSignal<string>('');
+  const attractionFact = useSignal<string>("");
 
   useTask$(async () => {
     // const response = await openai.createCompletion({
@@ -27,7 +27,7 @@ export default component$(() => {
 
   return (
     <div>
-      <div class={styles['fact']}>{attractionFact.value}</div>;
+      <div class={styles["fact"]}>{attractionFact.value}</div>;
     </div>
   );
 });

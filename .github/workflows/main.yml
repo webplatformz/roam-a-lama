@@ -31,8 +31,7 @@ jobs:
           npm run build.server
 
       - name: Upload to Deno Deploy
-        working-directory: frontend
         uses: denoland/deployctl@v1
         with:
           project: roam-a-lama
-          entrypoint: ./server/entry.deno.js
+          entrypoint: ./frontend/server/entry.deno.js
