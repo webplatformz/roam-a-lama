@@ -4,6 +4,7 @@
 
 
 .lama svg {
+  height: 200px;
   fill: var(--lama-background);
 }
 
