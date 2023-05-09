@@ -1,0 +1,58 @@
+.title {
+  margin-top: 80px;
+}
+
+
+.lama svg {
+  height: 200px;
+  fill: var(--lama-background);
+}
+
+.start {
+  cursor: pointer;
+}
+
+.startContainer {
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.circle {
+  cursor: pointer;
+  background: var(--lama-white);
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  gap: 20px;
+
+}
+
+@media screen and (min-width: 768px) {
+  .startContainer {
+    flex-direction: row;
+  }
+
+  .circle {
+    height: 350px;
+    width: 350px;
+  }
+
+
+}
+
+.triangle {
+  margin-right: -30px;
+  border-top: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 60px solid transparent;
+  border-left: 60px solid var(--lama-background);
+}
