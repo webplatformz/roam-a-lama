@@ -1,11 +1,9 @@
-import { component$, useStyles$ } from '@builder.io/qwik';
-import { routeLoader$ } from '@builder.io/qwik-city';
-
-import Header from '~/components/starter/header/header';
-import Footer from '~/components/starter/footer/footer';
+import {component$, useStyles$} from '@builder.io/qwik';
+import {routeLoader$} from '@builder.io/qwik-city';
 
 import styles from './styles.css?inline';
 import AttractionInformation from '~/components/attraction-information/attraction-information';
+import Home from "~/routes/home/home";
 
 export const useServerTimeLoader = routeLoader$(() => {
   return {
@@ -17,11 +15,10 @@ export default component$(() => {
   useStyles$(styles);
   return (
     <>
-      <Header />
       <main>
+        <Home />
         <AttractionInformation />
       </main>
-      <Footer />
     </>
   );
 });
