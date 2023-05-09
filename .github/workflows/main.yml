@@ -28,10 +28,10 @@ jobs:
         run: |
           npm ci --no-optional
           npm run build
-          npm run build.server
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
           project: "webplatformz-roam-a-lama"
           entrypoint: ./frontend/server/entry.deno.js
+          root: server
