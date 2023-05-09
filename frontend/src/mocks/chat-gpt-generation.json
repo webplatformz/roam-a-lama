@@ -1,19 +1,19 @@
 {
-    "id": "cmpl-7EDRavGQzQjNpOXXVmF1yDcVJICSW",
-    "object": "text_completion",
-    "created": 1683622626,
-    "model": "text-davinci-003",
-    "choices": [
-        {
-            "text": "\n\nThe Schluchsee is a lake located in the Black Forest region of Germany. It was created in 1929 after a dam was built on the river Schluch. The lake is now the largest body of water in the Black Forest and is a",
-            "index": 0,
-            "logprobs": null,
-            "finish_reason": "length"
-        }
-    ],
-    "usage": {
-        "prompt_tokens": 10,
-        "completion_tokens": 50,
-        "total_tokens": 60
+  "id": "cmpl-7EDRavGQzQjNpOXXVmF1yDcVJICSW",
+  "object": "text_completion",
+  "created": 1683622626,
+  "model": "text-davinci-003",
+  "choices": [
+    {
+      "text": "\n\nThe Schluchsee is a lake located in the Black Forest region of Germany. It was created in 1929 after a dam was built on the river Schluch. The lake is now the largest body of water in the Black Forest and is a",
+      "index": 0,
+      "logprobs": null,
+      "finish_reason": "length"
     }
+  ],
+  "usage": {
+    "prompt_tokens": 10,
+    "completion_tokens": 50,
+    "total_tokens": 60
+  }
 }
