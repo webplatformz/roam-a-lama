@@ -33,5 +33,5 @@ jobs:
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
-          project: roam-a-lama
+          project: "roam-a-lama"
           entrypoint: ./frontend/server/entry.deno.js
