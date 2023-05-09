@@ -1,5 +1,6 @@
 import { component$, useSignal, useTask$ } from '@builder.io/qwik';
 import { Configuration, OpenAIApi } from 'openai';
+import styles from './attraction-information.module.css';
 
 const configuration = new Configuration({
   apiKey: process.env.CHATGPT_API_KEY,
@@ -21,5 +22,5 @@ export default component$(() => {
       response.data.choices[0].text || 'Could not fetch information';
   });
 
-  return <div class='fact'>{attractionFact.value}</div>;
+  return <div class={styles['fact']}>{attractionFact.value}</div>;
 });
