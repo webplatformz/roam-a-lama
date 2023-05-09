@@ -1,0 +1,1003 @@
+{
+    "html_attributions": [],
+    "next_page_token": "AZose0kFtF-quLGYKNjeyeSemM9DjUvM5Cy-NaCxJjo2fVyU518eQVOgOJXI23MQE1hfGPQfKzKkt9J2ZqyZWbtkxPJ3Y_dJtOyCjnkgTdMJartoua5E49lGmWy4dIRksKE40J7x8_9mgm0ANabqmA3XM413jFG2G4UJrw7BwvkUM1ph94rR1isa3gTsiSoEtAIb9TOG899AogNHnl16s7tEdCcEI1CTwUvIY-pYkRo4uDGVU9k1H2qBwcOTfvtgBRw6M3Xk03lZutfvN_CKqvScikULSie_3g2ptI_J557g-emvBnexk4_xBVRqjcVnCpU88qiflX-ark0B0-S1wNtKBTehLaXV1KK8koVW9HQtZxD6P_xd7tTQ9hYbkj2CvT8XSHquDU8sM195Fxz_BIpF7jurfKqjwm_kk2lfPOKx8B3xevfj-RaUxJaFoKL3GMyDfOAjNwBPVQ",
+    "results": [
+        {
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 46.941801,
+                    "lng": 7.450036000000002
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 46.9431823802915,
+                        "lng": 7.451654830291503
+                    },
+                    "southwest": {
+                        "lat": 46.9404844197085,
+                        "lng": 7.448956869708499
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+            "icon_background_color": "#13B5C7",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+            "name": "Museum of Communication",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 3165,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/102637853261528405209\">Museum für Kommunikation</a>"
+                    ],
+                    "photo_reference": "AZose0kxlY4TKJ-RhDEc8gV9PIAqaT_fNE6xohklCRDo2oxZeO9amq01zuA-tqtkdBKnCoHOELyHw1mjC0Y4cj7t-Vtmfef1MZ1AVbSR6APQAf_l64eVAae8PHR7sIhVvcHJUOrx2Db2maYT2VxDUdkM3fJAk0UKT-1KaB3gCCcXuFHXfVaq",
+                    "width": 3156
+                }
+            ],
+            "place_id": "ChIJWZrlmc85jkcRlvFEJqAUWlc",
+            "plus_code": {
+                "compound_code": "WFR2+P2 Bern, Switzerland",
+                "global_code": "8FR9WFR2+P2"
+            },
+            "rating": 4.5,
+            "reference": "ChIJWZrlmc85jkcRlvFEJqAUWlc",
+            "scope": "GOOGLE",
+            "types": [
+                "museum",
+                "tourist_attraction",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 1663,
+            "vicinity": "Helvetiastrasse 16, Bern"
+        },
+        {
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 46.94001000000001,
+                    "lng": 7.440865
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 46.9413253302915,
+                        "lng": 7.442454380291502
+                    },
+                    "southwest": {
+                        "lat": 46.9386273697085,
+                        "lng": 7.439756419708498
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+            "icon_background_color": "#7B9EB0",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+            "name": "The Bowling Company AG",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 640,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/104296289408016723204\">Bowlingcenter Marzili</a>"
+                    ],
+                    "photo_reference": "AZose0kYcF-0l5ODaEIoUHGJCJrBc5CRPL_5F7otEuw_mCkSaZVSLz0QjbEsINGVbfCAY0gk9OOVuUrsdvPb7GqQC9cnqpQ4wt1Dv-BJfE1e4xdiuTOpre7uy80O0au01VRai5krmYM08RJT2IuE9QJcptxRmKWSGXNH6R1rmDgqqEsqxsZh",
+                    "width": 960
+                }
+            ],
+            "place_id": "ChIJebaZxMk5jkcRVzPBiaU9h-A",
+            "plus_code": {
+                "compound_code": "WCRR+28 Bern, Switzerland",
+                "global_code": "8FR9WCRR+28"
+            },
+            "price_level": 2,
+            "rating": 4.2,
+            "reference": "ChIJebaZxMk5jkcRVzPBiaU9h-A",
+            "scope": "GOOGLE",
+            "types": [
+                "tourist_attraction",
+                "bar",
+                "restaurant",
+                "food",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 656,
+            "vicinity": "Sandrainstrasse 12, Bern"
+        },
+        {
+            "business_status": "CLOSED_TEMPORARILY",
+            "geometry": {
+                "location": {
+                    "lat": 46.94424819999999,
+                    "lng": 7.449265599999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 46.94550703029149,
+                        "lng": 7.4507777802915
+                    },
+                    "southwest": {
+                        "lat": 46.9428090697085,
+                        "lng": 7.448079819708496
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+            "icon_background_color": "#13B5C7",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+            "name": "Kunsthalle Bern",
+            "permanently_closed": true,
+            "photos": [
+                {
+                    "height": 3472,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/116340976825535610364\">Patrick Mudekereza</a>"
+                    ],
+                    "photo_reference": "AZose0mxT_EkI9G5xvmPNz7MwqSr1YbsdJY0ukc43m512euI32VXq-OfTg0mI50AKXPTjAoIfh5FweQmHfmQtNxAdacS7p2Lb1mPRxd0p9xBov7RH9fKFkCC5mkcCkeeGWVdda4u8eIZhrpZknQzDmzjkJu_96EiUHxRMn2_drHvJcvVHNJ-",
+                    "width": 4624
+                }
+            ],
+            "place_id": "ChIJnwNMo8U5jkcRHydM7sJOyXo",
+            "plus_code": {
+                "compound_code": "WCVX+MP Bern, Switzerland",
+                "global_code": "8FR9WCVX+MP"
+            },
+            "rating": 4.2,
+            "reference": "ChIJnwNMo8U5jkcRHydM7sJOyXo",
+            "scope": "GOOGLE",
+            "types": [
+                "tourist_attraction",
+                "museum",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 138,
+            "vicinity": "Helvetiaplatz 1, Bern"
+        },
+        {
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 46.94656089999999,
+                    "lng": 7.444255900000002
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 46.9480812802915,
+                        "lng": 7.445553280291503
+                    },
+                    "southwest": {
+                        "lat": 46.9453833197085,
+                        "lng": 7.442855319708499
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/civic_building-71.png",
+            "icon_background_color": "#7B9EB0",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/civic-bldg_pinlet",
+            "name": "The Parliament Building",
+            "photos": [
+                {
+                    "height": 750,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/104959132048941780672\">Bundeshaus</a>"
+                    ],
+                    "photo_reference": "AZose0lN1IVH_0F0JZADwMhNiGfV1IAaYRoCSD47pcvVNKCD0DjPuOr9oo_sCLTpFnRj9fQMk7ySHwn7_UCWPT5yz8ngz0_SZY9Z4Mh8Jj_nxrjkrd70sR4Rz7f--9PxTxg031qNXne_G8XW4xi5pmarXbLYO2sjA9SK5ipB8aNLP3IJiu3a",
+                    "width": 1000
+                }
+            ],
+            "place_id": "ChIJ7QMXJsc5jkcRdcaSO2ngq74",
+            "plus_code": {
+                "compound_code": "WCWV+JP Bern, Switzerland",
+                "global_code": "8FR9WCWV+JP"
+            },
+            "rating": 4.5,
+            "reference": "ChIJ7QMXJsc5jkcRdcaSO2ngq74",
+            "scope": "GOOGLE",
+            "types": [
+                "tourist_attraction",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 1273,
+            "vicinity": "Bundesplatz 3, Bern"
+        },
+        {
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 46.949068,
+                    "lng": 7.446067699999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 46.9504863302915,
+                        "lng": 7.447370380291503
+                    },
+                    "southwest": {
+                        "lat": 46.9477883697085,
+                        "lng": 7.444672419708498
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/worship_general-71.png",
+            "icon_background_color": "#7B9EB0",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/worship_christian_pinlet",
+            "name": "Französische Kirche",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 1536,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/116129447848153415989\">Église française de Berne</a>"
+                    ],
+                    "photo_reference": "AZose0klyAd4sCE8wBqkSFF0WRtleNMRmrjvJ0uV4T9RO1bjk01Bh5vR0O8YhJUpMEOY-iFViNRQ7lHMja-4Mgm5On5l6dDbfvzwlLVePyqepX-Vc_8RFXB_DWGSyYyPWxkdeJ9IJh43snn5H7tuhHgncFK1wZXiHRdTXndpokiPXVWKd6Vt",
+                    "width": 2048
+                }
+            ],
+            "place_id": "ChIJ18qbF8E5jkcRiY-tnbLdfE8",
+            "plus_code": {
+                "compound_code": "WCXW+JC Bern, Switzerland",
+                "global_code": "8FR9WCXW+JC"
+            },
+            "rating": 4.3,
+            "reference": "ChIJ18qbF8E5jkcRiY-tnbLdfE8",
+            "scope": "GOOGLE",
+            "types": [
+                "tourist_attraction",
+                "church",
+                "place_of_worship",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 101,
+            "vicinity": "Zeughausgasse 8, Bern"
+        },
+        {
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 46.9439023,
+                    "lng": 7.434221199999998
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 46.94518433029149,
+                        "lng": 7.435514580291501
+                    },
+                    "southwest": {
+                        "lat": 46.94248636970849,
+                        "lng": 7.432816619708496
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+            "icon_background_color": "#13B5C7",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+            "name": "Swiss Label",
+            "place_id": "ChIJWVLQCbo5jkcRdAds20-tTEw",
+            "plus_code": {
+                "compound_code": "WCVM+HM Bern, Switzerland",
+                "global_code": "8FR9WCVM+HM"
+            },
+            "reference": "ChIJWVLQCbo5jkcRdAds20-tTEw",
+            "scope": "GOOGLE",
+            "types": [
+                "tourist_attraction",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "Schwarztorstrasse 26, Bern"
+        },
+        {
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 46.9479744,
+                    "lng": 7.447790999999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 46.9493319302915,
+                        "lng": 7.449316380291501
+                    },
+                    "southwest": {
+                        "lat": 46.9466339697085,
+                        "lng": 7.446618419708497
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+            "icon_background_color": "#13B5C7",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+            "name": "Zytglogge",
+            "photos": [
+                {
+                    "height": 12000,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/107470487126585702459\">KI B</a>"
+                    ],
+                    "photo_reference": "AZose0lNaSOop-KehTnuHIegLEPZ48Kg6b9H1z1VPydVev4kpvHayo7E70-joZpolwDX95PFQin44RbWPWjyuw6k2Qq6TxYYjFFynny2h7vXBO6FLhTuJQ_F1KBUyTepUVLT-C1he-SUzN1MVylyVX17zqqdkvRPA4QdlF3m7KgpTI_FFKHv",
+                    "width": 9000
+                }
+            ],
+            "place_id": "ChIJ2VyJVME5jkcRRrAu5ve6FDI",
+            "plus_code": {
+                "compound_code": "WCXX+54 Bern, Switzerland",
+                "global_code": "8FR9WCXX+54"
+            },
+            "rating": 4.6,
+            "reference": "ChIJ2VyJVME5jkcRRrAu5ve6FDI",
+            "scope": "GOOGLE",
+            "types": [
+                "tourist_attraction",
+                "museum",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 2526,
+            "vicinity": "Bim Zytglogge 1, Bern"
+        },
+        {
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 46.9482449,
+                    "lng": 7.443944699999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 46.9498876802915,
+                        "lng": 7.445421930291501
+                    },
+                    "southwest": {
+                        "lat": 46.9471897197085,
+                        "lng": 7.442723969708497
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+            "icon_background_color": "#13B5C7",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+            "name": "Käfigturm",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 1800,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/100393398839334880133\">Tom Oki</a>"
+                    ],
+                    "photo_reference": "AZose0myZFkLZXXlxPS__JbM8x_9bcAvtnYOXo3iLsFrImN_6GmoIgiclp5nj59ssLO9SqXtp1hVrIbjIoSa0zYwulp4B6jJaJyoaYNopIxuzMkemg-AwIdHLAqwYpr4P3CROMeyxzQb0wCOvUrk5f1UoWqi9WP2TH5vBa-ci0vBWEUVe5GZ",
+                    "width": 2400
+                }
+            ],
+            "place_id": "ChIJ3UKby8A5jkcR_r9T9g5lbSY",
+            "plus_code": {
+                "compound_code": "WCXV+7H Bern, Switzerland",
+                "global_code": "8FR9WCXV+7H"
+            },
+            "rating": 4.4,
+            "reference": "ChIJ3UKby8A5jkcR_r9T9g5lbSY",
+            "scope": "GOOGLE",
+            "types": [
+                "tourist_attraction",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 669,
+            "vicinity": "Marktgasse 67, Bern"
+        },
+        {
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 46.9471069,
+                    "lng": 7.444149599999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 46.94855838029149,
+                        "lng": 7.445498580291502
+                    },
+                    "southwest": {
+                        "lat": 46.9458604197085,
+                        "lng": 7.442800619708497
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+            "icon_background_color": "#13B5C7",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+            "name": "Bundesplatz",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 4032,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/103919291717748327157\">eitsik gez</a>"
+                    ],
+                    "photo_reference": "AZose0nNjRpA2rNk6txX_e9UkyPh0TdccCPdlmBPukWcJTWozVLGIWsBD2eChqIJnYJ5FiCoix8NHE9DXhY07gu1AWHJxqOsUouLbf7mH47jQW_9esR5K3sDEhJUHRXuiUaW5DlGVIcqM89KMZyktIWvJE0_ab89q_PZr3j7bFPC4Gj-sj36",
+                    "width": 3024
+                }
+            ],
+            "place_id": "ChIJy22EJMc5jkcRwjalaytMhr4",
+            "plus_code": {
+                "compound_code": "WCWV+RM Bern, Switzerland",
+                "global_code": "8FR9WCWV+RM"
+            },
+            "rating": 4.6,
+            "reference": "ChIJy22EJMc5jkcRwjalaytMhr4",
+            "scope": "GOOGLE",
+            "types": [
+                "tourist_attraction",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 2885,
+            "vicinity": "Bundesplatz, Bern"
+        },
+        {
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 46.94303679999999,
+                    "lng": 7.449318699999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 46.9446724302915,
+                        "lng": 7.450290580291503
+                    },
+                    "southwest": {
+                        "lat": 46.9419744697085,
+                        "lng": 7.447592619708498
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+            "icon_background_color": "#13B5C7",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+            "name": "Bernisches Historisches Museum / Einstein Museum",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 1448,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/110005310429417174485\">Bernisches Historisches Museum / Einstein Museum</a>"
+                    ],
+                    "photo_reference": "AZose0k5OewySBVYhm9-mSZdRmNi4CeBCmxtxx8u3I5Y72KUGypQppf_C_y_NY6k9l07SYhM48mG9sfkE8b7UENDIAcaOrIhpFxCIYaQd_3mEtOVAQR3Ia5sMo2BcLay3KXS9w3wdtJT5av1oGov_ys2ohyQy9JDVuvFynOMaNjQrFhKC13I",
+                    "width": 2048
+                }
+            ],
+            "place_id": "ChIJgyUZgcU5jkcR6TuTu8aclmk",
+            "plus_code": {
+                "compound_code": "WCVX+6P Bern, Switzerland",
+                "global_code": "8FR9WCVX+6P"
+            },
+            "rating": 4.6,
+            "reference": "ChIJgyUZgcU5jkcR6TuTu8aclmk",
+            "scope": "GOOGLE",
+            "types": [
+                "tourist_attraction",
+                "museum",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 2447,
+            "vicinity": "Helvetiaplatz 5, Bern"
+        },
+        {
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 46.9498091,
+                    "lng": 7.444440299999997
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 46.9511250802915,
+                        "lng": 7.445774180291501
+                    },
+                    "southwest": {
+                        "lat": 46.94842711970851,
+                        "lng": 7.443076219708497
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/park-71.png",
+            "icon_background_color": "#4DB546",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/tree_pinlet",
+            "name": "Meret-Oppenheim-Brunnen",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 3264,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/106928786953371695913\">Kirstie-lee Smith</a>"
+                    ],
+                    "photo_reference": "AZose0k2Z6gLYvX_M_XAu6MOoW9d-Bms3qwYSE-86kzuaW8AKHS-PNQOZFgGji28jr1ozyaHkfSPziBxxAJ7Z4ke6mzgt4lxwbUsiFnHBGeN-uXEE7IwK8o9xW9WsasOHjkfcNkIuJgq0pJlaFyHwl8kJBbqz9lEVHKWR2OBETUZ3B2poRzq",
+                    "width": 2448
+                }
+            ],
+            "place_id": "ChIJPzUA7sA5jkcRuNzOOX9DXTY",
+            "plus_code": {
+                "compound_code": "WCXV+WQ Bern, Switzerland",
+                "global_code": "8FR9WCXV+WQ"
+            },
+            "rating": 4.3,
+            "reference": "ChIJPzUA7sA5jkcRuNzOOX9DXTY",
+            "scope": "GOOGLE",
+            "types": [
+                "tourist_attraction",
+                "park",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 70,
+            "vicinity": "Nägeligasse, Bern"
+        },
+        {
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 46.9479263,
+                    "lng": 7.440782800000001
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 46.94895418029149,
+                        "lng": 7.442155780291502
+                    },
+                    "southwest": {
+                        "lat": 46.94625621970849,
+                        "lng": 7.439457819708498
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/worship_general-71.png",
+            "icon_background_color": "#7B9EB0",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/worship_christian_pinlet",
+            "name": "Heiliggeistkirche",
+            "opening_hours": {
+                "open_now": false
+            },
+            "photos": [
+                {
+                    "height": 3004,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/115496571309884436557\">Николай Максимович</a>"
+                    ],
+                    "photo_reference": "AZose0k4HmlK6y-QN_PzOZoL_sa-8JGfomUYVLF5iMp7rUEfZjHOfPEvy-Ji-IVrh3_brvUAv-EtW9nLrpzW-qQ_TlrYBzJMxQFQjFUBM7ohHsopApBfE0pQ3g3o22dsMwcI87gQiaOWbcwNt3hala1m3yImP3hbE5Z5LF5jmg45mFvn6GOF",
+                    "width": 3000
+                }
+            ],
+            "place_id": "ChIJ47y-q7g5jkcROz12rQdzd6E",
+            "plus_code": {
+                "compound_code": "WCXR+58 Bern, Switzerland",
+                "global_code": "8FR9WCXR+58"
+            },
+            "rating": 4.5,
+            "reference": "ChIJ47y-q7g5jkcROz12rQdzd6E",
+            "scope": "GOOGLE",
+            "types": [
+                "tourist_attraction",
+                "church",
+                "place_of_worship",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 218,
+            "vicinity": "Spitalgasse 44, Bern"
+        },
+        {
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 46.9487088,
+                    "lng": 7.4437796
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 46.95032193029149,
+                        "lng": 7.445196480291503
+                    },
+                    "southwest": {
+                        "lat": 46.9476239697085,
+                        "lng": 7.442498519708498
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/shopping-71.png",
+            "icon_background_color": "#4B96F3",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/shopping_pinlet",
+            "name": "Markt Waisenhausplatz",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 2160,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/103692954055793411313\">Hung Fang</a>"
+                    ],
+                    "photo_reference": "AZose0lo4Fj9Z-uXDoJkP_-SaZDi8sNwN8B5Tr9g9KbClWTdnW1aKtOnPfs8K5OPTRqe6L-tbA2G_XLGOG-KBxMl5BsLoGJh488NIgQ_CQAltVDWK_lgrK9McFhpuejOrD9aV7cC8BsIhH9Z_J5CKDSRit3UGEwo63IK3koeHjvlCd-GZyY",
+                    "width": 3840
+                }
+            ],
+            "place_id": "ChIJw3fOx8A5jkcRbZ6t8tPUqP4",
+            "plus_code": {
+                "compound_code": "WCXV+FG Bern, Switzerland",
+                "global_code": "8FR9WCXV+FG"
+            },
+            "rating": 4.3,
+            "reference": "ChIJw3fOx8A5jkcRbZ6t8tPUqP4",
+            "scope": "GOOGLE",
+            "types": [
+                "tourist_attraction",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 665,
+            "vicinity": "Waisenhausplatz, Bern"
+        },
+        {
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 46.9455003,
+                    "lng": 7.440361900000001
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 46.9467038302915,
+                        "lng": 7.441410330291502
+                    },
+                    "southwest": {
+                        "lat": 46.9440058697085,
+                        "lng": 7.438712369708497
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/park-71.png",
+            "icon_background_color": "#4DB546",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/tree_pinlet",
+            "name": "Kleine Schanze",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 3456,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/113632214581522299366\">piyush bhagwatkar</a>"
+                    ],
+                    "photo_reference": "AZose0kVThu-tlSieO6zsyUuymFkNB-T8yDoxoLQxsrTRwwPLNXvCL2Oyk6Wbb7HjwB1CQ_7rvDxd5TWnxjJwV_dyfit0WzFv99rJa65rE_CTCvmZ_7EUq5GPotIkTwg7yHqxV8ltxxYcpHLsRMv_1n9hLqvsd14ussQWXE5P2F37PtS8yaa",
+                    "width": 4608
+                }
+            ],
+            "place_id": "ChIJo6qeYbg5jkcRLkjmPJvgGA8",
+            "plus_code": {
+                "compound_code": "WCWR+64 Bern, Switzerland",
+                "global_code": "8FR9WCWR+64"
+            },
+            "rating": 4.5,
+            "reference": "ChIJo6qeYbg5jkcRLkjmPJvgGA8",
+            "scope": "GOOGLE",
+            "types": [
+                "tourist_attraction",
+                "park",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 3791,
+            "vicinity": "Taubenstrasse 6, Bern"
+        },
+        {
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 46.9458698,
+                    "lng": 7.440296999999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 46.9474241802915,
+                        "lng": 7.441569930291501
+                    },
+                    "southwest": {
+                        "lat": 46.9447262197085,
+                        "lng": 7.438871969708496
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+            "icon_background_color": "#13B5C7",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+            "name": "Universal Post Monument",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 4032,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/117033085369681819676\">Patrick Egger</a>"
+                    ],
+                    "photo_reference": "AZose0nubVTa-FRAYdfr6XyEuVUeEqRgEK2_-hqiOv0zEqtKsfpVDxTzMXrYIexMv6dTs-oXOzSRKGQ-27GZcmiNbCyUzv9BagqgiVoJkhiWSOM0lNanU88hf15jH-pJ9yHAbs9NUsFZeJbA1xES-sY45oaNHm80riYBnIJAVJ-IMdVvQo7v",
+                    "width": 3024
+                }
+            ],
+            "place_id": "ChIJTUxhirg5jkcRVCDzsM9iTjM",
+            "plus_code": {
+                "compound_code": "WCWR+84 Bern, Switzerland",
+                "global_code": "8FR9WCWR+84"
+            },
+            "rating": 4.6,
+            "reference": "ChIJTUxhirg5jkcRVCDzsM9iTjM",
+            "scope": "GOOGLE",
+            "types": [
+                "tourist_attraction",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 45,
+            "vicinity": "Bundesgasse 7, Bern"
+        },
+        {
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 46.9469153,
+                    "lng": 7.437875699999998
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 46.9482642802915,
+                        "lng": 7.439224680291501
+                    },
+                    "southwest": {
+                        "lat": 46.9455663197085,
+                        "lng": 7.436526719708496
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+            "icon_background_color": "#13B5C7",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+            "name": "Adrian Von Bubenberg Denkmal",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 4000,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/112402933858957951351\">Torben Hvolmgaard Sørensen</a>"
+                    ],
+                    "photo_reference": "AZose0n_LjMFVH1qR-l4THSocE_xTRyz98e4sdUAl5O6A1xeM06Qv22lefvcdFPczaChtDHFSQcy-KRk4z-2GXyajwzPVSGoINCyvLVd2fGlOK_mcxxbzgrBK209uIiaKT_yIU9QW79GkNpvwidP8VLLsZTEhlYWmj_r-2gPHnRrIW_H9bsU",
+                    "width": 3000
+                }
+            ],
+            "place_id": "ChIJwZbxuQY5jkcRyO1WVBoHVcs",
+            "plus_code": {
+                "compound_code": "WCWQ+Q5 Bern, Switzerland",
+                "global_code": "8FR9WCWQ+Q5"
+            },
+            "rating": 4.9,
+            "reference": "ChIJwZbxuQY5jkcRyO1WVBoHVcs",
+            "scope": "GOOGLE",
+            "types": [
+                "tourist_attraction",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 7,
+            "vicinity": "Bern"
+        },
+        {
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 46.9448444,
+                    "lng": 7.446549199999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 46.94620028029149,
+                        "lng": 7.447881630291502
+                    },
+                    "southwest": {
+                        "lat": 46.94350231970849,
+                        "lng": 7.445183669708498
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+            "icon_background_color": "#13B5C7",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+            "name": "View spot Bundeshaus",
+            "photos": [
+                {
+                    "height": 3024,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/102884554968998489629\">Bea Rod</a>"
+                    ],
+                    "photo_reference": "AZose0le9BCiz6DSXWZICyzciQ6S_XJ_IAtxbfXcwamCm5aNCgC8-iaaW1MaMek4a8-o0bx2VwRXm3PRRgu3ZZi-qbhhWu11igYFp-Tk2LKs824KbDJBRzcyvU75Bi0eVROalf9gUaw6vrbx5heg7KoxHHlvn1O4uHOBSNluecD1CdF8Gyi5",
+                    "width": 4032
+                }
+            ],
+            "place_id": "ChIJ706PlwA5jkcRDlGucIZmh4Q",
+            "plus_code": {
+                "compound_code": "WCVW+WJ Bern, Switzerland",
+                "global_code": "8FR9WCVW+WJ"
+            },
+            "rating": 5,
+            "reference": "ChIJ706PlwA5jkcRDlGucIZmh4Q",
+            "scope": "GOOGLE",
+            "types": [
+                "tourist_attraction",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 1,
+            "vicinity": "Schwellenmattstrasse 1, Bern"
+        },
+        {
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 46.94745169999999,
+                    "lng": 7.439794200000001
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 46.9487327802915,
+                        "lng": 7.440693080291503
+                    },
+                    "southwest": {
+                        "lat": 46.9460348197085,
+                        "lng": 7.437995119708499
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+            "icon_background_color": "#13B5C7",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+            "name": "urbirun Bern - self-audioguided runningtours",
+            "opening_hours": {
+                "open_now": true
+            },
+            "place_id": "ChIJDQT2CeE5jkcR2mzAKH8Iy9w",
+            "plus_code": {
+                "compound_code": "WCWQ+XW Bern, Switzerland",
+                "global_code": "8FR9WCWQ+XW"
+            },
+            "reference": "ChIJDQT2CeE5jkcR2mzAKH8Iy9w",
+            "scope": "GOOGLE",
+            "types": [
+                "tourist_attraction",
+                "point_of_interest",
+                "establishment"
+            ],
+            "vicinity": "Bubenbergplatz, Bern"
+        },
+        {
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 46.94770329999999,
+                    "lng": 7.440308399999999
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 46.94906653029149,
+                        "lng": 7.441533130291502
+                    },
+                    "southwest": {
+                        "lat": 46.9463685697085,
+                        "lng": 7.438835169708497
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+            "icon_background_color": "#13B5C7",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+            "name": "Baldachin Bern Bahnhofsplatz",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 2448,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/109057836651752203929\">Claudio Joss</a>"
+                    ],
+                    "photo_reference": "AZose0m24Jkea2OABCqSqwVhS4EkcuZBCG4Dv6JLwHEFGxLsevgKKF8qVZgtng0R9KVEWZLsKAIci1BUwaR9j2dolzgL8bD1RjSMA_c7DfgmyeGTeP_sZlcf0onno9EVK9Nn-k9gh5dXq2pgpip8aUurLQZYmIomTqq3BY4pfoY7JmuYb2Z7",
+                    "width": 3264
+                }
+            ],
+            "place_id": "ChIJrRENjAc5jkcRwBWi8dR2baY",
+            "plus_code": {
+                "compound_code": "WCXR+34 Bern, Switzerland",
+                "global_code": "8FR9WCXR+34"
+            },
+            "rating": 4,
+            "reference": "ChIJrRENjAc5jkcRwBWi8dR2baY",
+            "scope": "GOOGLE",
+            "types": [
+                "tourist_attraction",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 7,
+            "vicinity": "Bahnhofplatz, Bern"
+        },
+        {
+            "business_status": "OPERATIONAL",
+            "geometry": {
+                "location": {
+                    "lat": 46.9470829,
+                    "lng": 7.443878700000001
+                },
+                "viewport": {
+                    "northeast": {
+                        "lat": 46.9483243302915,
+                        "lng": 7.445128780291501
+                    },
+                    "southwest": {
+                        "lat": 46.94562636970851,
+                        "lng": 7.442430819708497
+                    }
+                }
+            },
+            "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+            "icon_background_color": "#13B5C7",
+            "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+            "name": "Wasserspiel Bundesplatz",
+            "opening_hours": {
+                "open_now": true
+            },
+            "photos": [
+                {
+                    "height": 512,
+                    "html_attributions": [
+                        "<a href=\"https://maps.google.com/maps/contrib/117514020209459427097\">MS PictureHunter</a>"
+                    ],
+                    "photo_reference": "AZose0kdy3f98nf1TQtNkEtpoMWbwNVcuQ1CFbXmFmezxC24c7Cf-_yVrw3ARxVMpX4ongb0d526rl2ay5jOraBpVwSKHVazJrN8rtg8jy_9ouVa3vBC4o-FoqUTRAydq46JWpQV1VLR2Nv-MJxbB4lr9-Ul1ZAt_cAv_Mw-2LwgNBJl_uHM",
+                    "width": 768
+                }
+            ],
+            "place_id": "ChIJ1Wq83945jkcRZXrpn1OKoYE",
+            "plus_code": {
+                "compound_code": "WCWV+RH Bern, Switzerland",
+                "global_code": "8FR9WCWV+RH"
+            },
+            "rating": 4.5,
+            "reference": "ChIJ1Wq83945jkcRZXrpn1OKoYE",
+            "scope": "GOOGLE",
+            "types": [
+                "tourist_attraction",
+                "point_of_interest",
+                "establishment"
+            ],
+            "user_ratings_total": 15,
+            "vicinity": "Bundesplatz, Bern"
+        }
+    ],
+    "status": "OK"
+}
