@@ -1,33 +1,45 @@
-import { component$, useSignal, useTask$ } from "@builder.io/qwik";
-// import { Configuration, OpenAIApi } from "openai";
-import styles from "./attraction-information.module.css";
-import mockFact from "../../mocks/chat-gpt-generation.json";
+import { component$, useSignal, useTask$ } from '@builder.io/qwik';
+import styles from './attraction-information.module.css';
 
-// const configuration = new Configuration({
-//   apiKey: process.env.CHATGPT_API_KEY,
-// });
-// const openai = new OpenAIApi(configuration);
+function fetchInformation() {
+  const requestOptions = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: 'Bearer ' + process.env.CHATGPT_API_KEY,
+    },
+    body: JSON.stringify({
+      model: 'text-davinci-003',
+      prompt:
+        'Tell me a fun fact about Bern in Switzerland in a single sentence with less than 20 words.',
+      temperature: 0.8,
+      max_tokens: 20,
+    }),
+  };
+  return fetch('https://api.openai.com/v1/completions', requestOptions).then(
+    (res) =>
+      res.json().catch((err) => {
+        console.log(err.message);
+      })
+  );
+}
 
 export default component$(() => {
-  const attractionFact = useSignal<string>("");
-
+  const attractionFact = useSignal<string>('');
   useTask$(async () => {
-    // const response = await openai.createCompletion({
-    //   model: 'text-davinci-003',
-    //   prompt:
-    //     'Tell me something about Bern in Switzerland in less than "50" words and complete sentences.',
-    //   temperature: 0.8,
-    //   max_tokens: 50,
-    // });
-    // attractionFact.value =
-    //   response.data.choices[0].text || 'Could not fetch information';
-    const response = await mockFact;
-    attractionFact.value = response.choices[0].text;
+    await fetchInformation()
+      .then((res) => {
+        console.log(res);
+        attractionFact.value = res?.choices[0].text;
+      })
+      .catch(() => {
+        attractionFact.value = 'Could not fetch information';
+      });
   });
 
   return (
-    <div>
-      <div class={styles["fact"]}>{attractionFact.value}</div>;
+    <div class={styles['fact']}>
+      <div>{attractionFact.value}</div>
     </div>
   );
 });
