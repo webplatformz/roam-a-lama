@@ -1,12 +1,20 @@
 import {$, component$} from '@builder.io/qwik';
 import styles from './home.module.css';
 import {Lama} from "~/components/starter/icons/lama";
+import {useNavigate} from "@builder.io/qwik-city";
 
 
 export default component$(() => {
 
+    const navigate = useNavigate();
+
     const startSearch = $(() => {
         console.log('searching for attractions around');
+
+        setTimeout(function () {
+            console.log('Todo: lama eye animation');
+            navigate('/attractions');
+        }, 5000);
     });
 
     return (
