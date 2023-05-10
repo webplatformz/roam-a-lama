@@ -1,12 +1,12 @@
 import { component$ } from '@builder.io/qwik';
+import AttractionList from '~/components/attraction-list/attraction-list';
 import Header from '~/components/starter/header/header';
-import AttractionInformation from '~/components/attraction-information/attraction-information';
 
 export default component$(() => {
   return (
     <>
       <Header />
-      <AttractionInformation />
+      <AttractionList />
     </>
   );
 });
