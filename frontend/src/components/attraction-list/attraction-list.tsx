@@ -2,6 +2,7 @@ import { component$, useSignal, useTask$ } from '@builder.io/qwik';
 import styles from './attraction-list.module.css';
 import type { NearbySearchResponse } from './models/nearby-search-response.type';
 import type { PointsOfInterest } from './models/points-of-interest.type';
+import { useNavigate } from '@builder.io/qwik-city';
 
 function fetchPointsOfInterest() {
   const locationCoordinates = '46.9415379005%2C7.43980157412'; // BERN
@@ -13,6 +14,13 @@ function fetchPointsOfInterest() {
 
 export default component$(() => {
   const attractionsList = useSignal<PointsOfInterest[]>([]);
+
+  const navigate = useNavigate();
+
+  // const goToAttraction = $(() => {
+  //   navigate('/attractions');
+  // });
+
   useTask$(async () => {
     await fetchPointsOfInterest()
       .then((res: NearbySearchResponse) => {
@@ -27,7 +35,11 @@ export default component$(() => {
     <div>
       <div class={styles['attraction-list']}>
         {attractionsList.value.map((attraction) => (
-          <button class={styles['attraction']} key={attraction.place_id}>
+          <button
+            class={styles['attraction']}
+            key={attraction.place_id}
+            onClick$={() => navigate('/attractions')}
+          >
             {attraction.name}
           </button>
         ))}

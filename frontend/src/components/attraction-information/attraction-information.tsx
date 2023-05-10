@@ -2,7 +2,7 @@ import { component$, useSignal, useTask$ } from '@builder.io/qwik';
 import styles from './attraction-information.module.css';
 import type { AttractionInformation } from './models/attraction-information.type';
 
-function fetchInformation() {
+const fetchInformation = () => {
   const requestOptions = {
     method: 'POST',
     headers: {
@@ -20,7 +20,7 @@ function fetchInformation() {
   return fetch('https://api.openai.com/v1/completions', requestOptions).then(
     (res) => res.json()
   );
-}
+};
 
 export default component$(() => {
   const attractionFact = useSignal<string>('');
