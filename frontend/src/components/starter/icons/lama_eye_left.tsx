@@ -1,5 +1,3 @@
-import styles from "~/components/starter/icons/lama.module.css";
-
 export const Lama_eye_left = () => (
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
          xml:space="preserve" width="30" height="30" >
