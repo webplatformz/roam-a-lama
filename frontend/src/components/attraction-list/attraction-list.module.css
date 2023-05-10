@@ -1,0 +1,21 @@
+.attraction {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 1%;
+  padding: 1%;
+  width: 230px;
+  border: 1px solid var(--lama-white);
+  background-color: var(--attractions-list-button);
+}
+
+:hover.attraction {
+  background-color: var(--attractions-list-button-hover);
+}
+
+.attraction-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
