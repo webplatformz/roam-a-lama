@@ -32,7 +32,7 @@ export default component$(() => {
                 </div>
 
                 <div class={styles.start} onClick$={() => startSearch()}>
-                    <h3>Start now</h3>
+                    <h3>Start now!</h3>
                 </div>
             </div>
 
