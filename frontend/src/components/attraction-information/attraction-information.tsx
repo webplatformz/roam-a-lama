@@ -34,12 +34,6 @@ export default component$(() => {
       });
   });
 
-  useTask$(async () => {
-    const response = await fetch('/backend/hello').then((resp) => resp.json());
-
-    console.log({ response });
-  });
-
   return (
     <div class={styles['fact']}>
       <div>{attractionFact.value}</div>
