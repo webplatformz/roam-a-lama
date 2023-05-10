@@ -1,5 +1,6 @@
 import { component$, useSignal, useTask$ } from '@builder.io/qwik';
 import styles from './attraction-information.module.css';
+import type { AttractionInformation } from './models/attraction-information.type';
 
 function fetchInformation() {
   const requestOptions = {
@@ -17,10 +18,7 @@ function fetchInformation() {
     }),
   };
   return fetch('https://api.openai.com/v1/completions', requestOptions).then(
-    (res) =>
-      res.json().catch((err) => {
-        console.log(err.message);
-      })
+    (res) => res.json()
   );
 }
 
@@ -28,8 +26,7 @@ export default component$(() => {
   const attractionFact = useSignal<string>('');
   useTask$(async () => {
     await fetchInformation()
-      .then((res) => {
-        console.log(res);
+      .then((res: AttractionInformation) => {
         attractionFact.value = res?.choices[0].text;
       })
       .catch(() => {
