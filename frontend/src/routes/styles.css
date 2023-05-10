@@ -2,14 +2,12 @@
 
 /* SHELL ---------------------------------------- */
 html {
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-    'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: 'Patrick Hand', cursive;
 }
 
 body {
-  background: var(--qwik-dark-background);
-  color: var(--qwik-dark-text);
+  background: var(--lama-background);
+  color: var(--lama-white);
   overflow-x: hidden;
 }
 
@@ -17,12 +15,13 @@ body {
 h1,
 h2,
 h3 {
+  text-transform: uppercase;
   color: white;
   margin: 0;
 }
 
 h1 {
-  font-size: 3.2rem;
+  font-size: 4rem;
   text-align: center;
 }
 h1 .highlight,
@@ -32,14 +31,15 @@ h3 .highlight {
 
 h2 {
   font-weight: 400;
-  font-size: 2.4rem;
+  font-size: 1.2rem;
+  text-align: center;
 }
 h2 .highlight {
   font-weight: 700;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -47,7 +47,7 @@ h3 {
     font-size: 5rem;
   }
   h2 {
-    font-size: 3.4rem;
+    font-size: 2rem;
   }
   h3 {
     font-size: 3rem;

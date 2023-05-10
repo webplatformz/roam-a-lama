@@ -18,7 +18,7 @@
     "fmt.check": "prettier --check .",
     "lint": "eslint \"src/**/*.ts*\"",
     "preview": "qwik build preview && vite preview --open",
-    "serve": "deno run --allow-net --allow-read --allow-env server/entry.deno.js",
+    "serve": "deno run --allow-net --allow-read --allow-env ./deploy/server/entry.deno.js",
     "start": "vite --open --mode ssr",
     "qwik": "qwik"
   },

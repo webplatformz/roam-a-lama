@@ -16,7 +16,7 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           cache: "npm"
-          cache-dependency-path: "./package-lock.json"
+          cache-dependency-path: "./frontend/package-lock.json"
 
       - name: Setup Deno
         uses: denoland/setup-deno@v1
@@ -24,12 +24,20 @@ jobs:
           deno-version: v1.x
 
       - name: Build frontend
+        working-directory: frontend
         run: |
           npm ci --no-optional
-          npm run build.server
+          npm run build
+
+      - name: Move to deploy folder
+        working-directory: frontend
+        run: |
+          mkdir deploy
+          mv dist deploy
+          mv server deploy
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
-          project: roam-a-lama
-          entrypoint: ./server/entry.deno.js
+          project: "webplatformz-roam-a-lama"
+          entrypoint: ./frontend/deploy/server/entry.deno.js
