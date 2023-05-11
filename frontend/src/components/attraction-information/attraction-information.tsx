@@ -2,6 +2,7 @@ import { component$, useSignal, useTask$ } from '@builder.io/qwik';
 import styles from './attraction-information.module.css';
 import { useLocation } from '@builder.io/qwik-city';
 import type { AttractionInformation } from './models/attraction-information.type';
+import TextToSpeech from "../text-to-speech";
 
 export default component$(() => {
   const attractionFact = useSignal<string>('');
@@ -19,7 +20,8 @@ export default component$(() => {
   });
 
   return (
-    <div class={styles['fact']}>
+    <div class={styles.fact}>
+      <TextToSpeech text={attractionFact.value} />
       <div>{attractionFact.value}</div>
     </div>
   );
