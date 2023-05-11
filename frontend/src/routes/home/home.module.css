@@ -2,7 +2,7 @@
   margin-top: 80px;
 }
 
-.lama  {
+.lama {
   position: absolute;
   top: 10%;
 }
@@ -28,6 +28,10 @@
 
 .start {
   cursor: pointer;
+}
+
+.inactive {
+  color: var(--inactive);
 }
 
 .startContainer {
@@ -59,7 +63,7 @@
     width: 350px;
   }
 
-  .lama  {
+  .lama {
     top: 20%;
   }
 }

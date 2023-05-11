@@ -1,25 +1,44 @@
-import { component$, useSignal } from '@builder.io/qwik';
+import { component$, useSignal, useVisibleTask$ } from '@builder.io/qwik';
 import styles from './home.module.css';
 import { Lama } from '~/components/starter/icons/lama';
 import { useNavigate } from '@builder.io/qwik-city';
 import { Lama_eye_left } from '~/components/starter/icons/lama_eye_left';
 import { Lama_eye_right } from '~/components/starter/icons/lama_eye_right';
+import type { CurrentLocation } from '~/components/current-location/models/current-location.type';
 
 export default component$(() => {
   const showEyes = useSignal(true);
+  const currentLocation = useSignal<CurrentLocation | undefined>();
+  const isLocating = useSignal(true);
+
+  useVisibleTask$(() => {
+    navigator.geolocation.getCurrentPosition((pos) => {
+      const location: CurrentLocation = {
+        latitude: pos.coords.latitude,
+        longitude: pos.coords.longitude,
+      };
+      isLocating.value = false;
+      currentLocation.value = location;
+    });
+  });
 
   const navigate = useNavigate();
 
   return (
     <>
       <div class={styles.title}>
-        <h1>Roam a Llama</h1>
+        <h1>Roam-a-Llama</h1>
         <h2>your gps based audio guide</h2>
       </div>
       <div class={styles.startContainer}>
         <div
           class={styles.circle}
-          onClick$={() => navigate('/points-of-interest')}
+          onClick$={() =>
+            !isLocating.value &&
+            navigate(
+              `/points-of-interest/${currentLocation.value?.latitude}/${currentLocation.value?.longitude}`
+            )
+          }
         >
           <div class={styles.lama}>
             {showEyes.value && (
@@ -72,9 +91,24 @@ export default component$(() => {
 
         <div
           class={styles.start}
-          onClick$={() => navigate('/points-of-interest')}
+          onClick$={() =>
+            !isLocating.value &&
+            navigate(
+              `/points-of-interest/${currentLocation.value?.latitude}/${currentLocation.value?.longitude}`
+            )
+          }
         >
-          <h3>Start now!</h3>
+          {isLocating.value ? <h3>Locating...</h3> : <h3>Start now!</h3>}
+          {isLocating.value ? (
+            <h4></h4>
+          ) : (
+            <h4>
+              {`Coordinates: 
+              ${currentLocation.value?.latitude}, 
+              ${currentLocation.value?.longitude}
+              `}
+            </h4>
+          )}
         </div>
       </div>
     </>
