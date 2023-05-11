@@ -78,3 +78,8 @@
   border-bottom: 60px solid transparent;
   border-left: 60px solid var(--lama-background);
 }
+
+.glasses svg {
+  margin-top: 77px;
+  margin-left: 50px;
+}

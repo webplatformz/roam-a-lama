@@ -1,10 +1,11 @@
-import { component$, useSignal, useVisibleTask$ } from '@builder.io/qwik';
+import { $, component$, useSignal, useVisibleTask$ } from '@builder.io/qwik';
 import styles from './home.module.css';
 import { Lama } from '~/components/starter/icons/lama';
 import { useNavigate } from '@builder.io/qwik-city';
 import { Lama_eye_left } from '~/components/starter/icons/lama_eye_left';
 import { Lama_eye_right } from '~/components/starter/icons/lama_eye_right';
 import type { CurrentLocation } from '~/components/current-location/models/current-location.type';
+import { Lama_glasses } from '~/components/starter/icons/lama_glasses';
 
 export default component$(() => {
   const showEyes = useSignal(true);
@@ -24,6 +25,32 @@ export default component$(() => {
 
   const navigate = useNavigate();
 
+  const one = useSignal('');
+  const two = useSignal('');
+
+  const startSearch = $(() => {
+    showEyes.value = false;
+
+    const interval = setInterval(() => {
+      const color = ['var(--lama-white)', 'var(--lama-background)'];
+      one.value = color[Math.floor(Math.random() * 2)];
+      two.value = color[Math.floor(Math.random() * 2)];
+      // @ts-ignore
+      document.getElementById('glasses-background').style.fill = one.value;
+      // @ts-ignore
+      document.getElementById('glasses-dots').style.fill = two.value;
+    }, 200);
+
+    if (!isLocating.value) {
+      setTimeout(() => {
+        navigate(
+          `/points-of-interest/${currentLocation.value?.latitude}/${currentLocation.value?.longitude}`
+        );
+        clearInterval(interval);
+      }, 2000);
+    }
+  });
+
   return (
     <>
       <div class={styles.title}>
@@ -31,15 +58,7 @@ export default component$(() => {
         <h2>your gps based audio guide</h2>
       </div>
       <div class={styles.startContainer}>
-        <div
-          class={styles.circle}
-          onClick$={() =>
-            !isLocating.value &&
-            navigate(
-              `/points-of-interest/${currentLocation.value?.latitude}/${currentLocation.value?.longitude}`
-            )
-          }
-        >
+        <div class={styles.circle} onClick$={() => startSearch()}>
           <div class={styles.lama}>
             {showEyes.value && (
               <div
@@ -82,6 +101,17 @@ export default component$(() => {
                 </div>
               </div>
             )}
+
+            {!showEyes.value && (
+              <div
+                class={styles.glasses}
+                style={{
+                  fill: `${one.value}`,
+                }}
+              >
+                <Lama_glasses />
+              </div>
+            )}
             <div class={styles.wholeLama}>
               <Lama />
             </div>
@@ -89,15 +119,7 @@ export default component$(() => {
           <div class={styles.triangle}></div>
         </div>
 
-        <div
-          class={styles.start}
-          onClick$={() =>
-            !isLocating.value &&
-            navigate(
-              `/points-of-interest/${currentLocation.value?.latitude}/${currentLocation.value?.longitude}`
-            )
-          }
-        >
+        <div class={styles.start} onClick$={() => startSearch()}>
           {isLocating.value ? <h3>Locating...</h3> : <h3>Start now!</h3>}
           {isLocating.value ? (
             <h4></h4>
