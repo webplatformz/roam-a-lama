@@ -1,14 +1,37 @@
-import { component$, useSignal } from '@builder.io/qwik';
+import { $, component$, useSignal } from '@builder.io/qwik';
 import styles from './home.module.css';
 import { Lama } from '~/components/starter/icons/lama';
 import { useNavigate } from '@builder.io/qwik-city';
 import { Lama_eye_left } from '~/components/starter/icons/lama_eye_left';
 import { Lama_eye_right } from '~/components/starter/icons/lama_eye_right';
+import {Lama_glasses} from "~/components/starter/icons/lama_glasses";
 
 export default component$(() => {
   const showEyes = useSignal(true);
-
   const navigate = useNavigate();
+
+  const one = useSignal('');
+  const two = useSignal('');
+
+    const startSearch = $(() => {
+
+        showEyes.value = false;
+
+        const interval = setInterval(() => {
+            const color = ['var(--lama-white)', 'var(--lama-background)'];
+            one.value = color[Math.floor(Math.random() * 2)];
+            two.value = color[Math.floor(Math.random() * 2)];
+            // @ts-ignore
+            document.getElementById("glasses-background").style.fill = one.value;
+            // @ts-ignore
+            document.getElementById("glasses-dots").style.fill = two.value;
+        }, 200);
+
+        setTimeout(function () {
+            navigate('/points-of-interest');
+            clearInterval(interval);
+        }, 2000);
+    });
 
   return (
     <>
@@ -19,7 +42,7 @@ export default component$(() => {
       <div class={styles.startContainer}>
         <div
           class={styles.circle}
-          onClick$={() => navigate('/points-of-interest')}
+          onClick$={() => startSearch()}
         >
           <div class={styles.lama}>
             {showEyes.value && (
@@ -63,6 +86,14 @@ export default component$(() => {
                 </div>
               </div>
             )}
+
+            {!showEyes.value && (
+                <div class={styles.glasses} style={{
+                    fill: `${one.value}`,
+                }}>
+                  <Lama_glasses />
+                </div>
+            )}
             <div class={styles.wholeLama}>
               <Lama />
             </div>
@@ -72,7 +103,7 @@ export default component$(() => {
 
         <div
           class={styles.start}
-          onClick$={() => navigate('/points-of-interest')}
+          onClick$={() => startSearch()}
         >
           <h3>Start now!</h3>
         </div>
