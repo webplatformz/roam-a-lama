@@ -8,6 +8,7 @@ import styles from './attraction-information.module.css';
 import { useLocation, useNavigate } from '@builder.io/qwik-city';
 import type { AttractionInformation } from './models/attraction-information.type';
 import type { CurrentLocation } from '../current-location/models/current-location.type';
+import TextToSpeech from '../text-to-speech';
 
 export interface AttractionInfo {
   location: string;
@@ -55,7 +56,8 @@ export default component$<AttractionInfo>((props) => {
   });
 
   return (
-    <div class={styles['fact']}>
+    <div class={styles.fact}>
+      <TextToSpeech text={attractionFact.value} />
       <div>{attractionFact.value}</div>
       <button
         class={styles['back-button']}
