@@ -13,8 +13,7 @@ export default component$<TextToSpeechProps>((props) => {
     // @ts-ignore
     const voice: Signal<SpeechSynthesisVoice> = useSignal(null);
     const rate = useSignal(1);
-
-    let voices = useSignal([]);
+    const voices = useSignal([]);
 
     useVisibleTask$(() => {
         const interval = setInterval(() => {
@@ -108,7 +107,6 @@ export default component$<TextToSpeechProps>((props) => {
                     }
                 </div>
             }
-
         </>
     );
 });
