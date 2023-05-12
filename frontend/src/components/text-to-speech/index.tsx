@@ -19,7 +19,7 @@ export default component$<TextToSpeechProps>((props) => {
         const interval = setInterval(() => {
             // @ts-ignore
             voices.value = noSerialize(window.speechSynthesis.getVoices());
-            if (voice.value === null && voices.value.length > 0) {
+            if (noSerialize(voice.value) === null && voices.value.length > 0) {
                 // @ts-ignore
                 voice.value = noSerialize(voices.value[0]);
             }
