@@ -8,7 +8,7 @@ export default component$(() => {
     <header class={styles.header}>
           <a href="/" title="home">
             <Lama/>
-            <h2>Roam a Llama</h2>
+            <h2>Roam-a-Llama</h2>
           </a>
     </header>
   );
