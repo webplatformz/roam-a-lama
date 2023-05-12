@@ -36,9 +36,9 @@ export default component$(() => {
       one.value = color[Math.floor(Math.random() * 2)];
       two.value = color[Math.floor(Math.random() * 2)];
       // @ts-ignore
-      document?.getElementById('glasses-background').style.fill = one.value;
+      document.getElementById('glasses-background').style.fill = one.value;
       // @ts-ignore
-      document?.getElementById('glasses-dots').style.fill = two.value;
+      document.getElementById('glasses-dots').style.fill = two.value;
     }, 200);
 
     if (!isLocating.value) {
@@ -105,9 +105,6 @@ export default component$(() => {
             {!showEyes.value && (
               <div
                 class={styles.glasses}
-                style={{
-                  fill: `${one.value}`,
-                }}
               >
                 <Lama_glasses />
               </div>
