@@ -8,7 +8,7 @@ export const onPost: RequestHandler = async (requestEvent) => {
   const locationCoordinates = `${coordinates.latitude}%2C${coordinates.longitude}`;
   const apiKey = import.meta.env.VITE_MAPS_API_KEY;
   const attractionsNearby = await fetch(
-    `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${locationCoordinates}&type=tourist_attraction&key=${apiKey}&rankby=distance`
+    `https://maps.googleapis.com/maps/api/place/nearbysearch/json?radius=2000&location=${locationCoordinates}&type=tourist_attraction&key=${apiKey}&rankby=prominence`
   ).then((res) => {
     return res.json();
   });
