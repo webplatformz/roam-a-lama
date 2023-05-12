@@ -22,6 +22,12 @@
   justify-content: center;
   align-items: center;
   font-size: 12px;
+  color: var(--attractions-list-light);
+}
+
+.star-icon {
+  color: var(--attractions-list-light);
+  font-size: '0.8rem';
 }
 
 :hover.attraction {
@@ -45,14 +51,14 @@
 }
 
 .icon {
-  width: 20px;
-  height: 20px;
+  width: 17px;
+  height: 17px;
   filter: brightness(0) invert(1);
 }
 
 .icon-container {
   position: relative;
-  right: -90%;
+  right: -91%;
   width: 20px;
   height: 20px;
 }

@@ -31,6 +31,30 @@ export function SubwayStar(props: QwikIntrinsicElements['svg'], key: string) {
   );
 }
 
+export function getDistance(
+  lat1: number,
+  lon1: number,
+  lat2: number,
+  lon2: number
+) {
+  const R = 6371; // Radius of the earth in km
+  const dLat = deg2rad(lat2 - lat1); // deg2rad below
+  const dLon = deg2rad(lon2 - lon1);
+  const a =
+    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+    Math.cos(deg2rad(lat1)) *
+      Math.cos(deg2rad(lat2)) *
+      Math.sin(dLon / 2) *
+      Math.sin(dLon / 2);
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  const d = R * c; // Distance in km
+  return Math.round(d * 10) / 10;
+}
+
+export function deg2rad(deg: number) {
+  return deg * (Math.PI / 180);
+}
+
 export default component$<CurrentLocation>((props) => {
   const attractionsList = useSignal<PointsOfInterest[]>([]);
   const currentLocation = useSignal<CurrentLocation>({
@@ -101,7 +125,7 @@ export default component$<CurrentLocation>((props) => {
                     {attraction.rating ? (
                       <div class={styles['rating']}>
                         <div>{`${attraction.rating}`}</div>
-                        <div style={{ color: 'white', fontSize: '0.8rem' }}>
+                        <div class={styles['star-icon']}>
                           <SubwayStar />
                         </div>
                         <div
@@ -109,6 +133,17 @@ export default component$<CurrentLocation>((props) => {
                         >{`(${attraction.user_ratings_total})`}</div>
                       </div>
                     ) : null}
+                    <div>
+                      <div class={styles['rating']}>
+                        {getDistance(
+                          currentLocation.value.latitude,
+                          currentLocation.value.longitude,
+                          attraction.geometry.location.lat,
+                          attraction.geometry.location.lng
+                        )}
+                        km
+                      </div>
+                    </div>
                   </div>
                 </button>
               ))}
