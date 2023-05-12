@@ -10,15 +10,18 @@ export default component$<TextToSpeechProps>((props) => {
 
     const isPaused: Signal<boolean> = useSignal(false);
     const isPlayed: Signal<boolean> = useSignal(false);
-    const voice = useSignal(null);
+    // @ts-ignore
+    const voice: Signal<SpeechSynthesisVoice> = useSignal(null);
     const rate = useSignal(1);
 
-    let voices: Signal<SpeechSynthesisVoice[]> = useSignal([])
+    let voices = useSignal([]);
 
     useVisibleTask$(() => {
         const interval = setInterval(() => {
+            // @ts-ignore
             voices.value = noSerialize(window.speechSynthesis.getVoices());
             if (voice.value === null && voices.value.length > 0) {
+                // @ts-ignore
                 voice.value = noSerialize(voices.value[0]);
             }
         }, 2000);
@@ -73,7 +76,7 @@ export default component$<TextToSpeechProps>((props) => {
                             <div>
                                 <label>
                                     Voice:&nbsp;
-                                    <select value={voice.value.name} onChange$={(event) => {
+                                    <select value={voice.value?.name} onChange$={(event) => {
                                         // @ts-ignore
                                         voice.value = noSerialize(voices.value.find((v: SpeechSynthesisVoice) => v.name === event.target.value));
                                     }}>
