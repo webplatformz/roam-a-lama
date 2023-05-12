@@ -75,10 +75,15 @@ export default component$<TextToSpeechProps>((props) => {
                             <div>
                                 <label>
                                     Voice:&nbsp;
-                                    <select value={voice.value?.name} onChange$={(event) => {
-                                        // @ts-ignore
-                                        voice.value = noSerialize(voices.value.find((v: SpeechSynthesisVoice) => v.name === event.target.value));
-                                    }}>
+                                    <select
+                                        value={
+                                            // @ts-ignore
+                                            voice.value?.name
+                                        }
+                                        onChange$={(event) => {
+                                            // @ts-ignore
+                                            voice.value = noSerialize(voices.value.find((v: SpeechSynthesisVoice) => v.name === event.target.value));
+                                        }}>
                                         {voices.value.map((v: SpeechSynthesisVoice) => (
                                             <option key={v.name} value={v.name}>
                                                 {v.name}
