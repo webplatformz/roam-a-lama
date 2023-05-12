@@ -11,7 +11,7 @@ export default component$<TextToSpeechProps>((props) => {
     const isPaused: Signal<boolean> = useSignal(false);
     const isPlayed: Signal<boolean> = useSignal(false);
     // @ts-ignore
-    const voice: Signal<SpeechSynthesisVoice> = useSignal(null);
+    const voice = useSignal(null);
     const rate = useSignal(1);
     const voices = useSignal([]);
 
@@ -19,7 +19,7 @@ export default component$<TextToSpeechProps>((props) => {
         const interval = setInterval(() => {
             // @ts-ignore
             voices.value = noSerialize(window.speechSynthesis.getVoices());
-            if (noSerialize(voice.value) === null && voices.value.length > 0) {
+            if (voice.value === null && voices.value.length > 0) {
                 // @ts-ignore
                 voice.value = noSerialize(voices.value[0]);
             }
