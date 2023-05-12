@@ -8,9 +8,10 @@ import type { CurrentLocation } from '~/components/current-location/models/curre
 import { Lama_glasses } from '~/components/starter/icons/lama_glasses';
 
 export default component$(() => {
-  const showEyes = useSignal(true);
   const currentLocation = useSignal<CurrentLocation | undefined>();
   const isLocating = useSignal(true);
+  const one = useSignal('');
+  const two = useSignal('');
 
   useVisibleTask$(() => {
     navigator.geolocation.getCurrentPosition((pos) => {
@@ -21,33 +22,29 @@ export default component$(() => {
       isLocating.value = false;
       currentLocation.value = location;
     });
+
+    const interval = setInterval(() => {
+        const color = ['var(--lama-white)', 'var(--lama-background)'];
+        one.value = color[Math.floor(Math.random() * 2)];
+        two.value = color[Math.floor(Math.random() * 2)];
+        // @ts-ignore
+        document.getElementById('glasses-background').style.fill = one.value;
+        // @ts-ignore
+        document.getElementById('glasses-dots').style.fill = two.value;
+    }, 200);
+
+    return () => {
+        clearInterval(interval);
+    };
   });
 
   const navigate = useNavigate();
 
-  const one = useSignal('');
-  const two = useSignal('');
-
   const startSearch = $(() => {
-    showEyes.value = false;
-
-    const interval = setInterval(() => {
-      const color = ['var(--lama-white)', 'var(--lama-background)'];
-      one.value = color[Math.floor(Math.random() * 2)];
-      two.value = color[Math.floor(Math.random() * 2)];
-      // @ts-ignore
-      document.getElementById('glasses-background').style.fill = one.value;
-      // @ts-ignore
-      document.getElementById('glasses-dots').style.fill = two.value;
-    }, 200);
-
     if (!isLocating.value) {
-      setTimeout(() => {
-        clearInterval(interval);
         navigate(
           `/points-of-interest/${currentLocation.value?.latitude}/${currentLocation.value?.longitude}`
         );
-      }, 2000);
     }
   });
 
@@ -60,7 +57,7 @@ export default component$(() => {
       <div class={styles.startContainer}>
         <div class={styles.circle} onClick$={() => startSearch()}>
           <div class={styles.lama}>
-            {showEyes.value && (
+            {!isLocating.value && (
               <div
                 document:onMouseMove$={(event) => {
                   const eyeBall: any = document.getElementById('eyeball-left');
@@ -102,7 +99,7 @@ export default component$(() => {
               </div>
             )}
 
-            {!showEyes.value && (
+            {isLocating.value && (
               <div
                 class={styles.glasses}
               >
@@ -116,19 +113,21 @@ export default component$(() => {
           <div class={styles.triangle}></div>
         </div>
 
-        <div class={styles.start} onClick$={() => startSearch()}>
-          {isLocating.value ? <h3>Locating...</h3> : <h3>Start now!</h3>}
-          {isLocating.value ? (
-            <h4></h4>
-          ) : (
-            <h4>
-              {`Coordinates: 
-              ${currentLocation.value?.latitude}, 
-              ${currentLocation.value?.longitude}
-              `}
-            </h4>
-          )}
-        </div>
+        {isLocating.value ?
+            <div>
+                <h3>Locating...</h3>
+                <h4></h4>
+            </div> :
+            <div class={styles.start} onClick$={() => startSearch()}>
+                <h3>Start now!</h3>
+                <h4>
+                    {`Coordinates: 
+                      ${currentLocation.value?.latitude}, 
+                      ${currentLocation.value?.longitude}
+                      `}
+                </h4>
+            </div>
+        }
       </div>
     </>
   );
