@@ -1,6 +1,6 @@
 .attraction {
   margin: 1%;
-  padding: 1%;
+  padding: 5px;
   width: 230px;
   border: 1px solid var(--lama-white);
   background-color: var(--attractions-list-button);
@@ -11,7 +11,9 @@
   align-items: center;
   flex-direction: column;
   position: relative;
+  max-width: 200px;
   top: -10px;
+  right: -10px;
 }
 
 .rating {

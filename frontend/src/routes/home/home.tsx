@@ -36,17 +36,17 @@ export default component$(() => {
       one.value = color[Math.floor(Math.random() * 2)];
       two.value = color[Math.floor(Math.random() * 2)];
       // @ts-ignore
-      document.getElementById('glasses-background').style.fill = one.value;
+      document?.getElementById('glasses-background').style.fill = one.value;
       // @ts-ignore
-      document.getElementById('glasses-dots').style.fill = two.value;
+      document?.getElementById('glasses-dots').style.fill = two.value;
     }, 200);
 
     if (!isLocating.value) {
       setTimeout(() => {
+        clearInterval(interval);
         navigate(
           `/points-of-interest/${currentLocation.value?.latitude}/${currentLocation.value?.longitude}`
         );
-        clearInterval(interval);
       }, 2000);
     }
   });

@@ -1,4 +1,11 @@
-import { $, component$, useSignal, useTask$ } from '@builder.io/qwik';
+import {
+  $,
+  Resource,
+  component$,
+  useResource$,
+  useSignal,
+  useTask$,
+} from '@builder.io/qwik';
 import type { QwikIntrinsicElements } from '@builder.io/qwik';
 import styles from './attraction-list.module.css';
 import type { NearbySearchResponse } from './models/nearby-search-response.type';
@@ -33,8 +40,13 @@ export default component$<CurrentLocation>((props) => {
   const navigate = useNavigate();
   const loc = useLocation();
 
-  useTask$(async () => {
-    await fetch(`${loc.url.origin}/backend/attractions-list`, {
+  useTask$(async () => {});
+
+  const attrListResource = useResource$<any>(async ({ track, cleanup }) => {
+    track(() => attractionsList);
+    const abortController = new AbortController();
+    cleanup(() => abortController.abort('cleanup'));
+    const res = await fetch(`${loc.url.origin}/backend/attractions-list`, {
       method: 'POST',
       headers: {
         Accept: 'application/json',
@@ -49,6 +61,7 @@ export default component$<CurrentLocation>((props) => {
       .catch(() => {
         attractionsList.value = [];
       });
+    return res;
   });
 
   const onSelect = $((attractionName: string, compoundCode?: string) => {
@@ -59,37 +72,50 @@ export default component$<CurrentLocation>((props) => {
   return (
     <div>
       <h4 class={styles['attraction-list-title']}>Nearby attractions</h4>
-      <div class={styles['attraction-list']}>
-        {attractionsList.value.map((attraction) => (
-          <button
-            class={styles['attraction']}
-            key={attraction.place_id}
-            onClick$={() =>
-              onSelect(attraction.name, attraction.plus_code.compound_code)
-            }
-          >
-            <div class={styles['icon-container']}>
-              <img src={attraction.icon} class={styles['icon']} />
-            </div>
-            <div class={styles['label-container']}>
-              <div class={styles['label']}>
-                <div>{attraction.name}</div>
-              </div>
-              {attraction.rating ? (
-                <div class={styles['rating']}>
-                  <div>{`${attraction.rating}`}</div>
-                  <div style={{ color: 'white', fontSize: '0.8rem' }}>
-                    <SubwayStar />
+      <Resource
+        value={attrListResource}
+        onPending={() => (
+          <div class={styles['attraction-list']}>Loading...</div>
+        )}
+        onResolved={() => {
+          return (
+            <div class={styles['attraction-list']}>
+              {attractionsList.value.map((attraction) => (
+                <button
+                  class={styles['attraction']}
+                  key={attraction.place_id}
+                  onClick$={() =>
+                    onSelect(
+                      attraction.name,
+                      attraction.plus_code.compound_code
+                    )
+                  }
+                >
+                  <div class={styles['icon-container']}>
+                    <img src={attraction.icon} class={styles['icon']} />
                   </div>
-                  <div
-                    style={{ marginLeft: '5px' }}
-                  >{`(${attraction.user_ratings_total})`}</div>
-                </div>
-              ) : null}
+                  <div class={styles['label-container']}>
+                    <div class={styles['label']}>
+                      <div>{attraction.name}</div>
+                    </div>
+                    {attraction.rating ? (
+                      <div class={styles['rating']}>
+                        <div>{`${attraction.rating}`}</div>
+                        <div style={{ color: 'white', fontSize: '0.8rem' }}>
+                          <SubwayStar />
+                        </div>
+                        <div
+                          style={{ marginLeft: '5px' }}
+                        >{`(${attraction.user_ratings_total})`}</div>
+                      </div>
+                    ) : null}
+                  </div>
+                </button>
+              ))}
             </div>
-          </button>
-        ))}
-      </div>
+          );
+        }}
+      />
     </div>
   );
 });

@@ -1,5 +1,7 @@
 import {
+  Resource,
   component$,
+  useResource$,
   useSignal,
   useTask$,
   useVisibleTask$,
@@ -34,8 +36,11 @@ export default component$<AttractionInfo>((props) => {
     });
   });
 
-  useTask$(async () => {
-    await fetch(`${loc.url.origin}/backend/attractions`, {
+  const gptResource = useResource$<any>(async ({ track, cleanup }) => {
+    track(() => attractionFact);
+    const abortController = new AbortController();
+    cleanup(() => abortController.abort('cleanup'));
+    const res = await fetch(`${loc.url.origin}/backend/attractions`, {
       method: 'POST',
       headers: {
         Accept: 'application/json',
@@ -53,12 +58,24 @@ export default component$<AttractionInfo>((props) => {
       .catch(() => {
         attractionFact.value = 'Could not fetch information';
       });
+
+    return res;
   });
 
   return (
-    <div class={styles.fact}>
-      <TextToSpeech text={attractionFact.value} />
-      <div>{attractionFact.value}</div>
+    <div class={styles.factcontainer}>
+      <Resource
+        value={gptResource}
+        onPending={() => <div class={styles.fact}>Loading...</div>}
+        onResolved={() => {
+          return (
+            <div class={styles.fact}>
+              <TextToSpeech text={attractionFact.value} />
+              <div>{attractionFact.value}</div>
+            </div>
+          );
+        }}
+      />
       <button
         class={styles['back-button']}
         onClick$={() =>
