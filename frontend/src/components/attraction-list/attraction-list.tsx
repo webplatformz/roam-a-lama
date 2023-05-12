@@ -68,18 +68,25 @@ export default component$<CurrentLocation>((props) => {
               onSelect(attraction.name, attraction.plus_code.compound_code)
             }
           >
-            {attraction.name}
-            {attraction.rating ? (
-              <div class={styles['rating']}>
-                <div>{`${attraction.rating}`}</div>
-                <div style={{ color: 'white', fontSize: '0.8rem' }}>
-                  <SubwayStar />
-                </div>
-                <div
-                  style={{ marginLeft: '5px' }}
-                >{`(${attraction.user_ratings_total})`}</div>
+            <div class={styles['icon-container']}>
+              <img src={attraction.icon} class={styles['icon']} />
+            </div>
+            <div class={styles['label-container']}>
+              <div class={styles['label']}>
+                <div>{attraction.name}</div>
               </div>
-            ) : null}
+              {attraction.rating ? (
+                <div class={styles['rating']}>
+                  <div>{`${attraction.rating}`}</div>
+                  <div style={{ color: 'white', fontSize: '0.8rem' }}>
+                    <SubwayStar />
+                  </div>
+                  <div
+                    style={{ marginLeft: '5px' }}
+                  >{`(${attraction.user_ratings_total})`}</div>
+                </div>
+              ) : null}
+            </div>
           </button>
         ))}
       </div>

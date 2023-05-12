@@ -1,14 +1,17 @@
 .attraction {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
   margin: 1%;
   padding: 1%;
   width: 230px;
   border: 1px solid var(--lama-white);
   background-color: var(--attractions-list-button);
+}
+
+.label-container {
+  display: flex;
+  align-items: center;
   flex-direction: column;
+  position: relative;
+  top: -10px;
 }
 
 .rating {
@@ -33,4 +36,21 @@
   text-align: center;
   font-size: 1.5rem;
   margin-bottom: 20px;
+}
+
+.label {
+  display: flex;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+}
+
+.icon-container {
+  position: relative;
+  right: -90%;
+  width: 20px;
+  height: 20px;
 }
