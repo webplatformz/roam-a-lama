@@ -8,6 +8,15 @@
   width: 230px;
   border: 1px solid var(--lama-white);
   background-color: var(--attractions-list-button);
+  flex-direction: column;
+}
+
+.rating {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
 }
 
 :hover.attraction {

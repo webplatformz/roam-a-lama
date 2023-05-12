@@ -1,9 +1,28 @@
 import { $, component$, useSignal, useTask$ } from '@builder.io/qwik';
+import type { QwikIntrinsicElements } from '@builder.io/qwik';
 import styles from './attraction-list.module.css';
 import type { NearbySearchResponse } from './models/nearby-search-response.type';
 import type { PointsOfInterest } from './models/points-of-interest.type';
 import { useLocation, useNavigate } from '@builder.io/qwik-city';
 import type { CurrentLocation } from '../current-location/models/current-location.type';
+
+export function SubwayStar(props: QwikIntrinsicElements['svg'], key: string) {
+  return (
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      width='1em'
+      height='1em'
+      viewBox='0 0 512 512'
+      {...props}
+      key={key}
+    >
+      <path
+        fill='currentColor'
+        d='M512 207.9H315.1L256 11l-59.1 196.9H0l157.5 108.3l-59 187.1L256 404.8l157.5 98.5l-59-187.1z'
+      ></path>
+    </svg>
+  );
+}
 
 export default component$<CurrentLocation>((props) => {
   const attractionsList = useSignal<PointsOfInterest[]>([]);
@@ -50,6 +69,17 @@ export default component$<CurrentLocation>((props) => {
             }
           >
             {attraction.name}
+            {attraction.rating ? (
+              <div class={styles['rating']}>
+                <div>{`${attraction.rating}`}</div>
+                <div style={{ color: 'white', fontSize: '0.8rem' }}>
+                  <SubwayStar />
+                </div>
+                <div
+                  style={{ marginLeft: '5px' }}
+                >{`(${attraction.user_ratings_total})`}</div>
+              </div>
+            ) : null}
           </button>
         ))}
       </div>
