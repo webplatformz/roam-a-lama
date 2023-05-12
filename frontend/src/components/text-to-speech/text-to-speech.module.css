@@ -10,3 +10,14 @@
   color: white;
   margin-right: 10px;
 }
+
+.textToSpeech .moreSettings {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.textToSpeech .moreSettings label {
+  display: flex;
+  flex-direction: row;
+}
