@@ -111,7 +111,11 @@ export default component$(() => {
               <Lama />
             </div>
           </div>
-          <div class={styles.triangle}></div>
+            {isLocating.value ?
+                <div class={styles.triangleInactive}></div>
+                :
+                <div class={styles.triangle}></div>
+            }
         </div>
 
         {isLocating.value ? (
