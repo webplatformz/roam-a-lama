@@ -6,8 +6,10 @@ import { Lama_eye_left } from '~/components/starter/icons/lama_eye_left';
 import { Lama_eye_right } from '~/components/starter/icons/lama_eye_right';
 import type { CurrentLocation } from '~/components/current-location/models/current-location.type';
 import { Lama_glasses } from '~/components/starter/icons/lama_glasses';
+import GptSettings from '~/components/gpt-settings/gpt-settings';
 
 export default component$(() => {
+  const showEyes = useSignal(false);
   const currentLocation = useSignal<CurrentLocation | undefined>();
   const isLocating = useSignal(true);
   const one = useSignal('');
@@ -20,21 +22,22 @@ export default component$(() => {
         longitude: pos.coords.longitude,
       };
       isLocating.value = false;
+      showEyes.value = true;
       currentLocation.value = location;
     });
 
     const interval = setInterval(() => {
-        const color = ['var(--lama-white)', 'var(--lama-background)'];
-        one.value = color[Math.floor(Math.random() * 2)];
-        two.value = color[Math.floor(Math.random() * 2)];
-        // @ts-ignore
-        document.getElementById('glasses-background').style.fill = one.value;
-        // @ts-ignore
-        document.getElementById('glasses-dots').style.fill = two.value;
+      const color = ['var(--lama-white)', 'var(--lama-background)'];
+      one.value = color[Math.floor(Math.random() * 2)];
+      two.value = color[Math.floor(Math.random() * 2)];
+      // @ts-ignore
+      document.getElementById('glasses-background').style.fill = one.value;
+      // @ts-ignore
+      document.getElementById('glasses-dots').style.fill = two.value;
     }, 200);
 
     return () => {
-        clearInterval(interval);
+      clearInterval(interval);
     };
   });
 
@@ -42,9 +45,9 @@ export default component$(() => {
 
   const startSearch = $(() => {
     if (!isLocating.value) {
-        navigate(
-          `/points-of-interest/${currentLocation.value?.latitude}/${currentLocation.value?.longitude}`
-        );
+      navigate(
+        `/points-of-interest/${currentLocation.value?.latitude}/${currentLocation.value?.longitude}`
+      );
     }
   });
 
@@ -99,10 +102,8 @@ export default component$(() => {
               </div>
             )}
 
-            {isLocating.value && (
-              <div
-                class={styles.glasses}
-              >
+            {!showEyes.value && (
+              <div class={styles.glasses}>
                 <Lama_glasses />
               </div>
             )}
@@ -113,21 +114,23 @@ export default component$(() => {
           <div class={styles.triangle}></div>
         </div>
 
-        {isLocating.value ?
-            <div>
-                <h3>Locating...</h3>
-                <h4></h4>
-            </div> :
-            <div class={styles.start} onClick$={() => startSearch()}>
-                <h3>Start now!</h3>
-                <h4>
-                    {`Coordinates: 
+        {isLocating.value ? (
+          <div>
+            <h3>Locating...</h3>
+            <h4></h4>
+          </div>
+        ) : (
+          <div class={styles.start}>
+            <h3 onClick$={() => startSearch()}>Start now!</h3>
+            <h4>
+              {`Coordinates: 
                       ${currentLocation.value?.latitude}, 
                       ${currentLocation.value?.longitude}
                       `}
-                </h4>
-            </div>
-        }
+            </h4>
+            <GptSettings></GptSettings>
+          </div>
+        )}
       </div>
     </>
   );

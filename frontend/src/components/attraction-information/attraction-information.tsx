@@ -1,19 +1,25 @@
 import {
+  $,
   Resource,
   component$,
+  useContext,
   useResource$,
   useSignal,
   useVisibleTask$,
 } from '@builder.io/qwik';
 import styles from './attraction-information.module.css';
 import { useLocation, useNavigate } from '@builder.io/qwik-city';
+import TextToSpeech from '../text-to-speech';
 import type { AttractionInformation } from './models/attraction-information.type';
 import type { CurrentLocation } from '../current-location/models/current-location.type';
-import TextToSpeech from '../text-to-speech';
+import type { GptConfig } from '../gpt-settings/models/gpt-config.model';
+import { GptContext } from '~/routes/layout';
+import GptSettings from '../gpt-settings/gpt-settings';
 
 export interface AttractionInfo {
   location: string;
   name: string;
+  config?: GptConfig;
 }
 
 export default component$<AttractionInfo>((props) => {
@@ -21,8 +27,8 @@ export default component$<AttractionInfo>((props) => {
   const loc = useLocation();
   const navigate = useNavigate();
   const isLocating = useSignal(true);
-
   const currentLocation = useSignal<CurrentLocation | undefined>();
+  const gptConfig = useContext(GptContext);
 
   useVisibleTask$(() => {
     navigator.geolocation.getCurrentPosition((pos) => {
@@ -35,10 +41,7 @@ export default component$<AttractionInfo>((props) => {
     });
   });
 
-  const gptResource = useResource$<any>(async ({ track, cleanup }) => {
-    track(() => attractionFact);
-    const abortController = new AbortController();
-    cleanup(() => abortController.abort('cleanup'));
+  const generateText = $(async () => {
     const res = await fetch(`${loc.url.origin}/backend/attractions`, {
       method: 'POST',
       headers: {
@@ -48,6 +51,7 @@ export default component$<AttractionInfo>((props) => {
       body: JSON.stringify({
         location: props.location,
         name: props.name,
+        config: gptConfig,
       }),
     })
       .then((res) => res.json())
@@ -55,24 +59,43 @@ export default component$<AttractionInfo>((props) => {
         attractionFact.value = res?.choices[0].text;
       })
       .catch(() => {
-        attractionFact.value = "Text-to-speech feature is now available on fairly any website, blog or newsletter like Substack. It's a game changer that you can listen to the content instead of reading it. Especially effective for people with visual or cognitive impairments or people who are on the go. I came up with the idea to implement it for my blog, so this is how I started doing a research on this topic which ended up being a tutorial for you. So in this tutorial, we will go through the process of building a text-to-speech component in React. We will use the Web Speech API to implement the text-to-speech functionality.";
-
-
+        attractionFact.value =
+          'Cannot load information. Please reload the page or try again later.';
       });
 
     return res;
+  });
+
+  const gptResource = useResource$<any>(async ({ track, cleanup }) => {
+    track(() => attractionFact);
+    const abortController = new AbortController();
+    cleanup(() => abortController.abort('cleanup'));
+    return generateText();
   });
 
   return (
     <div class={styles.factcontainer}>
       <Resource
         value={gptResource}
-        onPending={() => <div class={styles.fact}>Loading...</div>}
+        onPending={() => (
+          <div class={styles.fact}>Let me research that for you...</div>
+        )}
         onResolved={() => {
           return (
             <div class={styles.fact}>
               <TextToSpeech text={attractionFact.value} />
               <div>{attractionFact.value}</div>
+              <div>
+                <GptSettings></GptSettings>
+                <div class={styles['regenerate-button-container']}>
+                  <button
+                    class={styles['regenerate-button']}
+                    onClick$={() => generateText()}
+                  >
+                    Re-Generate
+                  </button>
+                </div>
+              </div>
             </div>
           );
         }}
