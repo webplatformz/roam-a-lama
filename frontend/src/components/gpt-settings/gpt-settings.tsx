@@ -75,7 +75,7 @@ export default component$(() => {
       <div>
         <h4 class={styles.optiontitle}>Length:</h4>
         <select
-          value={gptConfig.narrator}
+          value={gptConfig.length}
           onChange$={(event) => {
             // @ts-ignore
             gptConfig.length = ['short', 'normal', 'long'].find(

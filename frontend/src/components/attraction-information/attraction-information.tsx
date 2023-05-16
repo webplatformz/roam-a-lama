@@ -42,6 +42,7 @@ export default component$<AttractionInfo>((props) => {
   });
 
   const generateText = $(async () => {
+    attractionFact.value = 'Re-generating...';
     const res = await fetch(`${loc.url.origin}/backend/attractions`, {
       method: 'POST',
       headers: {
@@ -90,7 +91,10 @@ export default component$<AttractionInfo>((props) => {
                 <div class={styles['regenerate-button-container']}>
                   <button
                     class={styles['regenerate-button']}
-                    onClick$={() => generateText()}
+                    onClick$={() => {
+                      attractionFact.value = 'Let me research that...';
+                      generateText();
+                    }}
                   >
                     Re-Generate
                   </button>

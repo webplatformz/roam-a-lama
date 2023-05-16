@@ -31,9 +31,12 @@ export default component$(() => {
       one.value = color[Math.floor(Math.random() * 2)];
       two.value = color[Math.floor(Math.random() * 2)];
       // @ts-ignore
-      document.getElementById('glasses-background').style.fill = one.value;
-      // @ts-ignore
-      document.getElementById('glasses-dots').style.fill = two.value;
+      if (document.getElementById('glasses-background')) {
+        // @ts-ignore
+        document.getElementById('glasses-background').style.fill = one.value;
+        // @ts-ignore
+        document.getElementById('glasses-dots').style.fill = two.value;
+      }
     }, 200);
 
     return () => {
@@ -111,11 +114,11 @@ export default component$(() => {
               <Lama />
             </div>
           </div>
-            {isLocating.value ?
-                <div class={styles.triangleInactive}></div>
-                :
-                <div class={styles.triangle}></div>
-            }
+          {isLocating.value ? (
+            <div class={styles.triangleInactive}></div>
+          ) : (
+            <div class={styles.triangle}></div>
+          )}
         </div>
 
         {isLocating.value ? (
